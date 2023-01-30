@@ -1,0 +1,23 @@
+$ arm-none-eabi-nm.exe learn-in-depth.elf
+0001000c T main
+00010000 T reset
+000110d8 D stack_top
+00010008 t stop
+00010074 D string_buffer
+00010024 T uart_send_string
+
+
+$ arm-none-eabi-nm.exe app.o
+00000000 T main
+00000000 D string_buffer
+         U uart_send_string
+
+
+$ arm-none-eabi-nm.exe uart.o
+00000000 T uart_send_string
+
+
+$ arm-none-eabi-nm.exe startup.o
+         U main
+00000000 T reset
+00000008 t stop
