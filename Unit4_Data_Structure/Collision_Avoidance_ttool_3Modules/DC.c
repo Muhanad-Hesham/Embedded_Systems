@@ -20,7 +20,7 @@ void(*DC_state)(); // pointer seen only from DC.c mDCt be seen from main
 void DC_init()
 {
 	// init pwm
-	printf("\n DC init");
+	printf("\nDC init");
 }
 
 void DC_motor_set_speed(speed)
@@ -47,7 +47,7 @@ STATE_define(DC_busy)
 	//state action
 	//call pwm to make speed = DC_speed
 	DC_state = STATE(DC_idle);
-	printf("\nDC_idle state: speed=%d",DC_speed);
+	printf("\nDC_busy state: speed=%d",DC_speed);
 
 }
 
