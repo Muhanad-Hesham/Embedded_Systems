@@ -257,7 +257,7 @@ fifo_buff_status Find_Using_Fname(fifo_buf_t* fifo)
 }
 fifo_buff_status Display_Using_cid(fifo_buf_t* fifo)
 {
-	char temp_str; int i,j,flag=0;
+	char temp_str[40]; int i,j,flag=0;
 	int temp_cid;
 	info_t* ptr = fifo->base;
 	//if fifo is not exist
